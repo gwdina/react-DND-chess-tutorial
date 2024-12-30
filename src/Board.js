@@ -2,6 +2,8 @@ import React from 'react'
 import Square from './Square'
 import Knight from './Knight'
 import { canMoveKnight, moveKnight } from './Game'
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
 
 function handleSquareClick(toX, toY) {
     if (canMoveKnight(toX, toY)) {
@@ -32,7 +34,7 @@ export default function Board({ knightPosition }) {
   }
 
   return (
-    <div
+    <DndProvider backend={HTML5Backend}> <div
       style={{
         width: '80vmin',
         height: '80vmin',
@@ -42,5 +44,6 @@ export default function Board({ knightPosition }) {
     >
       {squares}
     </div>
+    </DndProvider>
   )
 }
