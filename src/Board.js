@@ -25,8 +25,8 @@ export default function Board({ knightPosition }) {
   return (
     <div
       style={{
-        width: '100%',
-        height: '100%',
+        width: '80vmin',
+        height: '80vmin',
         display: 'flex',
         flexWrap: 'wrap'
       }}
