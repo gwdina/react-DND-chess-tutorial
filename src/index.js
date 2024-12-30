@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import './index.css';
-import App from './App';
-import Knight from './Knight';
-import Square from './Square';
 import Board from './Board';
+import { observe } from './Game'
 
 // import reportWebVitals from './reportWebVitals';
 
@@ -22,8 +20,8 @@ import Board from './Board';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render( <Board knightPosition={[7, 4]} />
-
+observe((knightPosition) => root.render(<Board knightPosition={knightPosition} />
+)
 );
 
 // If you want to start measuring performance in your app, pass a function
