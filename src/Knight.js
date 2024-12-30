@@ -12,15 +12,26 @@ function Knight() {
 
   return (
     <div
-      ref={drag}
       style={{
-        opacity: isDragging ? 0.5 : 1,
-        fontSize: 25,
-        fontWeight: 'bold',
-        cursor: 'move',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
+        height: '100%',
       }}
     >
-      ♘
+      <span
+        ref={drag}
+        style={{
+          opacity: isDragging ? 0.5 : 1,
+          fontSize: '50px',
+          fontWeight: 'bold',
+          cursor: 'move',
+          lineHeight: '1',
+        }}
+      >
+        ♘
+      </span>
     </div>
   )
 }
